@@ -49,7 +49,7 @@ app.get("/movies/", async (request, response) => {
 
 //API-2
 app.post("/movies/", async (request, response) => {
-  const movieDetails = request.params;
+  const movieDetails = request.body;
   const { directorId, movieName, leadActor } = movieDetails;
 
   const updateMovieQuery = `
